@@ -48,6 +48,8 @@ Before getting started, ensure you have the following installed:
 - Create Ansible user and setup password.
 - Give root previliages to ansible user.
 - Enable password base authentication.
+- Create directory /opt/ansible and change ownership to user.
+- Write ansible playbook to copy file from anible server to application server.
 - Generate ssh-keys to connect control node server without password.
 
 ### C. Application Server:
@@ -59,6 +61,8 @@ Before getting started, ensure you have the following installed:
   #### Tomcat Setup:
   - To setup Tomcat refer to repository ➡️(https://github.com/Rathodrahul3/Tomcat-Setup)
   - Make sure Tomcat application user and ansible user same to aviod any error.
+ 
+Now copy ssh-keys from ansible to tomcat server to setup ssh connection between them.
 
 # ▶️ Set up CI/CD Pipeline.
 - Login to jenkins and configure Maven path.
