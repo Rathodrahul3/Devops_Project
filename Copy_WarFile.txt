@@ -1,0 +1,11 @@
+---
+- name: Coping war file onto application server
+  hosts: webservers
+  become: yes
+  become_user: ansadmin
+
+  tasks:
+   - name: Copy file
+     ansible.builtin.copy:
+         src: /opt/ansible/Hello_World_warproject.war
+         dest: /opt/tomcat/apache-tomcat-9.0.83/webapps
